@@ -1,0 +1,164 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.navbar-custom {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: white;
+}
+
+.navbar-custom .navbar-brand {
+  font-size: 20px;
+  text-transform: none;
+  letter-spacing: 1px;
+}
+
+.navbar-custom .nav li.active a {
+  color: #1ba39c;
+}
+
+@media (min-width: 768px) {
+  .navbar-custom {
+    padding: 20px 0;
+    border-bottom: 0;
+    font-size: 13px;
+    background: 0 0;
+  }
+}
+
+.intro {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 100px 0 100px 0;
+  text-align: center;
+  color: rgb(19, 19, 19);
+}
+
+.intro .intro-body {
+  vertical-align: middle;
+  padding-top: 10%;
+}
+
+.intro .intro-body .brand-heading {
+  font-size: 40px;
+}
+
+.intro .intro-body .intro-text {
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    height: 100%;
+    padding: 0;
+  }
+  .intro .intro-body .brand-heading {
+    font-size: 98px;
+    margin-top: 90px;
+    margin-bottom: 20px;
+    border-top: 4px solid rgb(0, 0, 0);
+    border-bottom: 4px solid rgb(0, 0, 0);
+    display: inline-block;
+    padding: 10px 0;
+  }
+  .intro .intro-body .intro-text {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 3px;
+  }
+}
+
+.btn-circle {
+  width: 50px;
+  height: 50px;
+  line-height: 33px;
+  text-align: center;
+  border: 2px solid rgb(53, 53, 53);
+  border-radius: 100% !important;
+  font-size: 20px;
+  color: rgb(53, 53, 53);
+  background-color: black;
+  background-image: url("../../assets/img/arrow.png");
+  background-size: 60% auto; /* You can adjust the percentage as needed */
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bgimg-1{
+  position: relative;
+  opacity: 0.8;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg-1 {
+  background-image: url("../../assets/img/coverImg.png");
+  min-height: 100%;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+.site-footer {
+  padding: 20px 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .site-footer h5 {
+    text-align: left;
+  }
+}
+
+.site-footer h5 {
+  color: inherit;
+  font-size: 16px;
+}
+
+.menu-content {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+}
+
+.sub-menu {
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  width: 270px;
+  height: 250px;
+  padding: 1.5rem;
+  text-align: center;
+} 
+
+.card-img-top {
+  max-height: 150px;
+  max-width: 230px;
+  min-height: 150px;
+  min-width: 230px;
+  z-index: 0;
+}
+
+@media (max-width: 756px) {
+  .sub-menu {
+    width: 100%;
+    height: 100%;
+  }
+}
