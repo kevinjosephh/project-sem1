@@ -6,7 +6,7 @@
             <div class="navbar-header">
                     </button>
                 <a class="navbar-brand page-scroll" href="index.php">
-                   Car Rentals </a>
+                DriveEase Car Rentals </a>
             </div>
             <?php
             if (isset($_SESSION['login_customer'])){
@@ -16,6 +16,12 @@
                     <li>
                         <a href="index.php">Home</a>
                     </li>
+                    <li>
+                        <a href="about_us.php">About us</a>
+            </li>
+            <li>
+                        <a href="contact_us.php">Contact us</a>
+            </li>
                     <li>
                         <a href="#"><span class="glyphicon glyphicon-user"></span> Welcome <?php echo $_SESSION['login_customer']; ?></a>
                     </li>
@@ -45,6 +51,12 @@
                     <li>
                         <a href="customerlogin.php">Customer</a>
                     </li>
+                    <li>
+                        <a href="about_us.php">About us</a>
+                    </li>
+                    <li>
+                        <a href="contact_us.php">Contact us</a>
+            </li>
                 </ul>
             </div>
             <?php   }
