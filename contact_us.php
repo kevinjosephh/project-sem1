@@ -51,35 +51,55 @@
                 <p>Got questions or feedback? Reach out to us through the form below or via our contact information. We'd love to hear from you!</p>
                 
                 <!-- Contact Form -->
-                <form action="contact_process.php" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+<!-- Add this code snippet in your contact.php file where you want to display the success message -->
+<?php
+if (isset($_GET['success']) && $_GET['success'] == '1') {
+    echo '<div id="successMessage" class="alert alert-success" role="alert">Form submitted successfully! We will get back to you soon.</div>';
+}
+?>
+
+
+
+                <!-- Contact Form -->
+<form action="contact_process.php" method="POST">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<!-- End Contact Form -->
+
                 <!-- End Contact Form -->
 
                 <!-- Contact Information -->
                 <div class="mt-4">
                     <h4>Contact Information:</h4>
-                    <p>Email: info@carrentals.com</p>
+                    <p>Email: driveeaserental@gmail.com</p>
                     <p>Phone: +1234567890</p>
-                    <p>Address: 123 Main Street, City, Country</p>
+                    <p>Address: Thakur Institute of Management Studies,Career Development & Research Thakur Educational Campus, Shyamnarayan Thakur Marg, Thakur Village, Kandivli (E), Mumbai – 400 101</p>
                 </div>
                 <!-- End Contact Information -->
             </div>
         </div>
     </div>
-
+    <script>
+    // Automatically hide the success message after 5 seconds (5000 milliseconds)
+    setTimeout(function() {
+        var successMessage = document.getElementById('successMessage');
+        if (successMessage) {
+            successMessage.style.display = 'none';
+        }
+    }, 5000); // Adjust the duration here (in milliseconds)
+</script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.easing.min.js"></script>

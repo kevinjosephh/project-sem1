@@ -315,6 +315,10 @@ h3 {
   text-align: center;
 }
 
+.site-footer p {
+  color: black !important;
+}
+
 @media (min-width: 768px) {
   .site-footer h5 {
     text-align: left;

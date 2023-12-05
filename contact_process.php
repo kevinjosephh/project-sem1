@@ -1,23 +1,24 @@
 <?php
+session_start();
+require 'connection.php';
+$conn = Connect();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
 
-    $to = "josephkevin04@gmail.com"; // Replace with your email address
-    $subject = "New Contact Form Submission from Car Rentals";
-    $body = "Name: $name\nEmail: $email\nMessage:\n$message";
+    // SQL to insert form data into a table named 'contact_messages'
+    $sql = "INSERT INTO feedback (name, email, message) VALUES ('$name', '$email', '$message')";
 
-    $headers = "From: $email";
-
-    // Send email
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Thank you for your message. We'll get back to you soon!";
+    if ($conn->query($sql) === TRUE) {
+        // Redirect back to the contact page with a success message
+        header("Location: contact_us.php?success=1");
+        exit();
     } else {
-        echo "Oops! Something went wrong. Please try again later.";
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
-} else {
-    // If the form was not submitted properly
-    echo "Oops! An error occurred. Please try again.";
+
+    $conn->close();
 }
+?>

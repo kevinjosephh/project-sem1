@@ -27,6 +27,20 @@ $(document).ready(function() {
     });
 });
 </script>
+<style>
+.checkbox-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 100px;
+}
+
+.checkbox-container div {
+    display: inline-flex;
+    gap:10px;
+    align-items: baseline;
+}
+
+</style>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -63,26 +77,29 @@ $selectedFuelTypes = isset($_GET['fuelTypes']) ? explode(',', $_GET['fuelTypes']
 $selectedSegments = isset($_GET['segments']) ? explode(',', $_GET['segments']) : [];
 
 ?>
-<div style="display: flex; justify-content: flex-start; gap: 20px;">
-<div>
-    <label>Filter by Fuel Type:</label><br>
-    <input type="checkbox" id="petrolCheckbox" onchange="applyFilters()" <?php if(in_array('Petrol', $selectedFuelTypes)) echo 'checked'; ?>>
-    <label for="petrolCheckbox">Petrol</label><br>
-    <input type="checkbox" id="dieselCheckbox" onchange="applyFilters()" <?php if(in_array('Diesel', $selectedFuelTypes)) echo 'checked'; ?>>
-    <label for="dieselCheckbox">Diesel</label>
-    <!-- Add checkboxes for other fuel types -->
+<div class="checkbox-container">
+    <div>
+        <label>Filter by Fuel Type:</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="petrolCheckbox" onchange="applyFilters()" <?php if(in_array('Petrol', $selectedFuelTypes)) echo 'checked'; ?>>
+            <label for="petrolCheckbox">Petrol</label>
+            <input type="checkbox" id="dieselCheckbox" onchange="applyFilters()" <?php if(in_array('Diesel', $selectedFuelTypes)) echo 'checked'; ?>>
+            <label for="dieselCheckbox">Diesel</label>
+        </div>
+    </div>
+    <div>
+        <label>Filter by Segment:</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="hatchbackCheckbox" onchange="applyFilters()" <?php if(in_array('Hatchback', $selectedSegments)) echo 'checked'; ?>>
+            <label for="hatchbackCheckbox">Hatchback</label>
+            <input type="checkbox" id="sedanCheckbox" onchange="applyFilters()" <?php if(in_array('Sedan', $selectedSegments)) echo 'checked'; ?>>
+            <label for="sedanCheckbox">Sedan</label>
+            <input type="checkbox" id="suvCheckbox" onchange="applyFilters()" <?php if(in_array('SUV', $selectedSegments)) echo 'checked'; ?>>
+            <label for="suvCheckbox">SUV</label>
+        </div>
+    </div>
 </div>
-<div>
-    <label>Filter by Segment:</label><br>
-    <input type="checkbox" id="hatchbackCheckbox" onchange="applyFilters()" <?php if(in_array('Hatchback', $selectedSegments)) echo 'checked'; ?>>
-    <label for="hatchbackCheckbox">Hatchback</label><br>
-    <input type="checkbox" id="sedanCheckbox" onchange="applyFilters()" <?php if(in_array('Sedan', $selectedSegments)) echo 'checked'; ?>>
-    <label for="sedanCheckbox">Sedan</label><br>
-    <input type="checkbox" id="suvCheckbox" onchange="applyFilters()" <?php if(in_array('SUV', $selectedSegments)) echo 'checked'; ?>>
-    <label for="suvCheckbox">SUV</label>
-    <!-- Add checkboxes for other segment types -->
-</div>
-</div>
+
         <section class="menu-content">
             <?php 
 
@@ -144,12 +161,31 @@ if(mysqli_num_rows($result1) > 0) {
         </section>
                     
     </div>
-    <footer class="site-footer">
+    <footer class="site-footer" style="background-color:#F1F1F1">
         <div class="container">
             <hr>
-            <div class="row">
-                <div class="col-sm-6">
-                    <h5>© 2023 Car Rentals</h5>
+            <div class="row" style="text-align:left;display:flex">
+            <div style="flex:1;">
+                <div class="mt-4" >
+                    <h3>DriveEase Rentals</h3>
+                    <p style="color: black;">At DriveEase Rentals, we're more than just a car rental service; we're your ultimate travel companion. Our journey began with a shared passion for transforming the way people experience travel. Founded by a group of enterprising students from Thakur MCA, we set out to bridge the gap between convenience, affordability, and exceptional service in the car rental industry.</p>
+                    
+                </div>
+                    <div >
+                        <h6>© 2023 DriveEase Car Rentals</h6>
+                    </div>
+                    </div>
+            <div class="mt-4" style="text-align:right;flex:2;">
+                    <h3>Contact Information:</h3>
+                    <p style="color: black;">Email: driveeaserental@gmail.com</p>
+                    <p style="color: black;">Phone: +1234567890</p>
+                    <p style="color: black;">Address: Thakur Institute of Management Studies,
+                    <br>    
+                    Career Development & Research Thakur Educational Campus,
+                    <br>     
+                    Shyamnarayan Thakur Marg, Thakur Village, Kandivli (E),
+                    <br>     
+                    Mumbai – 400 101</p>
                 </div>
                 
             </div>
@@ -159,23 +195,19 @@ if(mysqli_num_rows($result1) > 0) {
     function applyFilters() {
         var petrolChecked = $('#petrolCheckbox').is(':checked');
         var dieselChecked = $('#dieselCheckbox').is(':checked');
-        // Add more fuel type checkboxes as needed
 
         var hatchbackChecked = $('#hatchbackCheckbox').is(':checked');
         var sedanChecked = $('#sedanCheckbox').is(':checked');
         var suvChecked = $('#suvCheckbox').is(':checked');
-        // Add more segment checkboxes as needed
 
         var selectedFuelTypes = [];
         if (petrolChecked) selectedFuelTypes.push('Petrol');
         if (dieselChecked) selectedFuelTypes.push('Diesel');
-        // Push other selected fuel types
 
         var selectedSegments = [];
         if (hatchbackChecked) selectedSegments.push('Hatchback');
         if (sedanChecked) selectedSegments.push('Sedan');
         if (suvChecked) selectedSegments.push('SUV');
-        // Push other selected segments
 
         var selectedFuelTypesParam = selectedFuelTypes.join(',');
         var selectedSegmentsParam = selectedSegments.join(',');
