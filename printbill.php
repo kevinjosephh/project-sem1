@@ -94,13 +94,9 @@ else {
 
 
     <div class="container">
-        <!-- <h5 class="text-center">Please read the following information about your order.</h5> -->
+        
         <div class="box">
             <div class="col-md-10" style="float: none; margin: 0 auto; text-align: center;">
-                <!-- <h3 style="color: orange;">Your booking has been received and placed into out order processing system.</h3>
-                <br>
-                <h4>Please make a note of your <strong>order number</strong> now and keep in the event you need to communicate with us about your order.</h4>
-                <br> -->
                 <h3 style="color: orange;">Invoice</h3>
                 <br>
             </div>
@@ -153,7 +149,7 @@ else {
             <hr>
             <div class="row">
                 <div class="col-sm-6">
-                    <h5>© <?php echo date("Y"); ?> Car Rentals</h5>
+                    <h5>© <?php echo date("Y"); ?> DriveEase Car Rentals</h5>
                 </div>
             </div>
         </div>

@@ -96,7 +96,7 @@ function dateDiff($start, $end) {
             <hr>
             <div class="row">
                 <div class="col-sm-6">
-                    <h5>© <?php echo date("Y"); ?> Car Rentals</h5>
+                    <h5>© <?php echo date("Y"); ?> DriveEase Car Rentals</h5>
                 </div>
             </div>
         </div>

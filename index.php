@@ -20,9 +20,9 @@ $conn = Connect();
 $(document).ready(function() {
     $(window).scroll(function() {
         if ($(this).scrollTop() > 100) {
-            $('.navbar').css('background-color', '#fff'); // Opaque background
+            $('.navbar').css('background-color', '#fff'); 
         } else {
-            $('.navbar').css('background-color', 'transparent'); // Transparent background
+            $('.navbar').css('background-color', 'transparent'); 
         }
     });
 });
@@ -71,7 +71,7 @@ $(document).ready(function() {
     <div id="sec2" style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
         <h3 style="text-align:center;">Available Cars</h3>
 <br>
-<!-- Update the checkbox HTML -->
+<!-- Filter -->
 <?php 
 $selectedFuelTypes = isset($_GET['fuelTypes']) ? explode(',', $_GET['fuelTypes']) : [];
 $selectedSegments = isset($_GET['segments']) ? explode(',', $_GET['segments']) : [];
@@ -138,6 +138,7 @@ if(mysqli_num_rows($result1) > 0) {
         $fuel_type = $row1["fuel_type"];
    
         ?>
+        <!-- Car booking section -->
          <a href="booking.php?id=<?php echo($car_id) ?>">
             <div class="sub-menu">
             
@@ -231,9 +232,7 @@ if(mysqli_num_rows($result1) > 0) {
 </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <!-- Plugin JavaScript -->
     <script src="assets/js/jquery.easing.min.js"></script>
-    <!-- Custom Theme JavaScript -->
     <script src="assets/js/theme.js"></script>
 </body>
 
