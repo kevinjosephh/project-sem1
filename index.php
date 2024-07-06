@@ -12,7 +12,7 @@ $conn = Connect();
     <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/user.css">
+    <link rel="stylesheet" href="assets/css/user1.css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -225,7 +225,7 @@ if(mysqli_num_rows($result1) > 0) {
                 url += 'segments=' + selectedSegmentsParam;
             }
         }
-
+        url += '#sec2'
         window.location.href = url;
     }
 </script>
