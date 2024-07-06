@@ -10,14 +10,13 @@ if(!isset($_SESSION['login_customer'])){
 <title>Book Car </title>
 <head>
     <script type="text/javascript" src="assets/ajs/angular.min.js"> </script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="shortcut icon" type="image/png" href="assets/img/P.png.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="shortcut icon" type="image/png" href="assets/img/P.png.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/w3css/w3.css">
   <script type="text/javascript" src="assets/js/jquery.min.js"></script>
   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>  
-  <script type="text/javascript" src="assets/js/custom.js"></script> 
  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/clientpage.css" />
 </head>
 <body ng-app=""> 
@@ -66,7 +65,7 @@ if(!isset($_SESSION['login_customer'])){
           <label><h5>End Date:</h5></label>
           <input type="date" name="rent_end_date" min="<?php echo($today);?>" required="">
         <!-- </div>      -->
-<!-- Error radio button set default value -->        
+        <!-- Error radio button set default value -->        
         <h5>Choose your car type:</h5>
             <input type="radio" name="radio" value="ac" ng-model="myVar" > <b>With AC</b>
             <input type="radio" name="radio" value="non_ac" ng-model="myVar" ng-init="myVar='non_ac'"> <b>Without AC</b>
@@ -123,29 +122,7 @@ if(!isset($_SESSION['login_customer'])){
                     ?>
                 </select>
                 <!-- </form> -->
-                <div ng-switch="myVar1">
-                
-
-                <?php
-                        $sql3 = "SELECT * FROM driver d WHERE d.driver_availability = 'yes' AND d.client_username IN (SELECT cc.client_username FROM clientcars cc WHERE cc.car_id = '$car_id')";
-                        $result3 = mysqli_query($conn, $sql3);
-
-                        if(mysqli_num_rows($result3) > 0){
-                            while($row3 = mysqli_fetch_assoc($result3)){
-                                $driver_id = $row3["driver_id"];
-                                $driver_name = $row3["driver_name"];
-                                $driver_gender = $row3["driver_gender"];
-                                $driver_phone = $row3["driver_phone"];
-
-                ?>
-
-                <div ng-switch-when="<?php echo($driver_id); ?>">
-                    <h5>Driver Name:&nbsp; <b><?php echo($driver_name); ?></b></h5>
-                    <p>Gender:&nbsp; <b><?php echo($driver_gender); ?></b> </p>
-                    <p>Contact:&nbsp; <b><?php echo($driver_phone); ?></b> </p>
-                </div>
-                <?php }} ?>
-                </div>
+               
                 <input type="hidden" name="hidden_carid" value="<?php echo $car_id; ?>">
                 
          
@@ -157,14 +134,18 @@ if(!isset($_SESSION['login_customer'])){
             <h6><strong>Note:</strong> You will be charged with extra <span class="text-danger">Rs. 500</span> for each day after the due date ends.</h6>
         </div>
     </div>
-
+    <script>
+        function reveal() {
+    document.getElementById("hid").style.display = 'none';
+}
+    </script>
 </body>
 <footer class="site-footer">
         <div class="container">
             <hr>
             <div class="row">
                 <div class="col-sm-6">
-                    <h5>© <?php echo date("Y"); ?> Car Rentals</h5>
+                    <h5>© <?php echo date("Y"); ?> DriveEase Car Rentals</h5>
                 </div>
             </div>
         </div>

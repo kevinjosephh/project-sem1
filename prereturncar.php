@@ -10,7 +10,7 @@ $conn = Connect();
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/w3css/w3.css">
+<link rel="stylesheet" href="assets/w3css/w3.css">
 <link rel="stylesheet" type="text/css" href="assets/css/customerlogin.css">
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
@@ -85,7 +85,7 @@ $conn = Connect();
             <hr>
             <div class="row">
                 <div class="col-sm-6">
-                    <h5>© <?php echo date("Y"); ?> Car Rentals</h5>
+                    <h5>© <?php echo date("Y"); ?> DriveEase Car Rentals</h5>
                 </div>
             </div>
         </div>

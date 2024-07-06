@@ -17,10 +17,10 @@ $conn = Connect();
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <style>
         body {
-            padding-top: 70px; /* Adjust this value as needed */
+            padding-top: 70px; 
         }
         .navbar {
-            z-index: 1000; /* Ensure the navbar stays on top */
+            z-index: 1000; 
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -28,9 +28,9 @@ $conn = Connect();
         $(document).ready(function() {
             $(window).scroll(function() {
                 if ($(this).scrollTop() > 100) {
-                    $('.navbar').css('background-color', '#fff'); // Opaque background
+                    $('.navbar').css('background-color', '#fff'); 
                 } else {
-                    $('.navbar').css('background-color', 'transparent'); // Transparent background
+                    $('.navbar').css('background-color', 'transparent'); 
                 }
             });
         });
@@ -49,7 +49,7 @@ $conn = Connect();
                 <p>
                 At DriveEase Rentals, we're more than just a car rental service; we're your ultimate travel companion. Our journey began with a shared passion for transforming the way people experience travel. Founded by a group of enterprising students from Thakur MCA, we set out to bridge the gap between convenience, affordability, and exceptional service in the car rental industry.
                 </p>
-                <!-- Rest of your content -->
+                
             </div>
         </div>
         <div class="row">
@@ -58,7 +58,7 @@ $conn = Connect();
                 <p>
                 Driven by a desire to streamline the car rental process for students and travelers alike, our story started within the halls of Thakur MCA. Frustrated by the limitations and complexities of existing rental services, our founders envisioned a seamless and student-friendly alternative. Through dedication and innovation, DriveEase Rentals emerged as a solution-oriented platform catering to the diverse needs of our community.
                 </p>
-                <!-- Rest of your content -->
+               
             </div>
             </div>
             <div class="row">
@@ -69,7 +69,7 @@ $conn = Connect();
                 <br>
                 <b>Values:</b> Our core values revolve around transparency, accessibility, and customer-centricity. We believe in fostering a culture of trust, sustainability, and continuous improvement.
                 </p>
-                <!-- Rest of your content -->
+                
             </div>
         </div>
         <div class="row">
@@ -82,7 +82,7 @@ $conn = Connect();
                 <br>
                 <b>Exceptional Service:</b> Our commitment to exceptional customer service means a seamless booking experience, timely assistance, and a reliable support system throughout your rental journey.
                 </p>
-                <!-- Rest of your content -->
+                
             </div>
         </div>
         <div class="row">
@@ -91,7 +91,7 @@ $conn = Connect();
                 <p>
                 At DriveEase Rentals, our team comprises passionate individuals driven by a shared vision. From the tech-savvy minds behind our user-friendly platform to our dedicated customer service representatives, each member plays a pivotal role in delivering unparalleled service.
                 </p>
-                <!-- Rest of your content -->
+                
             </div>
         </div>
         </div>

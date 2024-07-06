@@ -50,8 +50,7 @@
                 <h2>Contact Us</h2>
                 <p>Got questions or feedback? Reach out to us through the form below or via our contact information. We'd love to hear from you!</p>
                 
-                <!-- Contact Form -->
-<!-- Add this code snippet in your contact.php file where you want to display the success message -->
+             
 <?php
 if (isset($_GET['success']) && $_GET['success'] == '1') {
     echo '<div id="successMessage" class="alert alert-success" role="alert">Form submitted successfully! We will get back to you soon.</div>';
@@ -78,27 +77,25 @@ if (isset($_GET['success']) && $_GET['success'] == '1') {
 </form>
 <!-- End Contact Form -->
 
-                <!-- End Contact Form -->
-
-                <!-- Contact Information -->
+                
                 <div class="mt-4">
                     <h4>Contact Information:</h4>
                     <p>Email: driveeaserental@gmail.com</p>
                     <p>Phone: +1234567890</p>
                     <p>Address: Thakur Institute of Management Studies,Career Development & Research Thakur Educational Campus, Shyamnarayan Thakur Marg, Thakur Village, Kandivli (E), Mumbai – 400 101</p>
                 </div>
-                <!-- End Contact Information -->
+               
             </div>
         </div>
     </div>
     <script>
-    // Automatically hide the success message after 5 seconds (5000 milliseconds)
+    
     setTimeout(function() {
         var successMessage = document.getElementById('successMessage');
         if (successMessage) {
             successMessage.style.display = 'none';
         }
-    }, 5000); // Adjust the duration here (in milliseconds)
+    }, 5000); 
 </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

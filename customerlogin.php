@@ -1,8 +1,8 @@
 <?php
-include('login_customer.php'); // Includes Login Script
+include('login_customer.php');
 
 if(isset($_SESSION['login_customer'])){
-header("location: index.php"); //Redirecting
+header("location: index.php");
 }
 ?>
 
@@ -89,7 +89,7 @@ header("location: index.php"); //Redirecting
             <hr>
             <div class="row">
                 <div class="col-sm-6">
-                    <h5>© <?php echo date("Y"); ?> Car Rentals</h5>
+                    <h5>© <?php echo date("Y"); ?> DriveEase Car Rentals</h5>
                 </div>
             </div>
         </div>

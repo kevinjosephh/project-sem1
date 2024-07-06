@@ -1,4 +1,4 @@
-<!-- navbar.php -->
+<!-- navbar-->
 
 
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="color: black">
